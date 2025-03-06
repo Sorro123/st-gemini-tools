@@ -1,6 +1,6 @@
 # Extension - Gemini Tools
 
-Allows for gemini tools such as google search to be used. Only google search is implemented at the moment, but more is coming soon.
+Allows for gemini tools such as google search to be used. Google search and structured output are currently implemented, more possibly in the future.
 Only works with AI studio API
 
 ## Features
