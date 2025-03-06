@@ -65,7 +65,8 @@ eventSource.on(event_types.CHAT_COMPLETION_SETTINGS_READY, enableTools);
 
 function enableTools(data)
 {
-    if(extension_settings[extensionName].geminiToolsEnabled)
+    const { chatCompletionSettings } = SillyTavern.getContext();
+    if(extension_settings[extensionName].geminiToolsEnabled && chatCompletionSettings.chat_completion_source === 'makersuite')
     {
         if(extension_settings[extensionName].geminiCurrentTool === TOOLS.SEARCH) data.tools = [{google_search: {},}];
         else if(extension_settings[extensionName].geminiCurrentTool === TOOLS.STRUCTURED)
