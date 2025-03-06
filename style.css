@@ -1,1 +1,5 @@
 /* All style elements for your extension go here */
+.gemini-tools-extension_block
+{
+    padding-left: 10px;
+}

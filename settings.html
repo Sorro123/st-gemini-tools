@@ -1,0 +1,30 @@
+
+    <div class="gemini-tools-extension-settings">
+        <div class="inline-drawer">
+            <div class="inline-drawer-toggle inline-drawer-header">
+                <b>Gemini Tools</b>
+                <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+            </div>
+            <div class="inline-drawer-content">
+                <div class="flex-container">
+                    <input id="gemini_tools_enabled" type="checkbox" />
+                    <label for="gemini_tools_enabled">Enabled</label>
+                </div>
+                <div id="gemini_tools_settings">
+                    <h4>Current tool</h4>
+                    <div class="gemini-tools-extension_block flex-container">
+                        <select id="gemini_current_tool">
+                            <option value="search">Grounding with Google Search</option>
+                            <option value="structured">Structured Output</option>
+                        </select>
+                    </div>
+                    <div id="prompt_structure_container" class="gemini-tools-extension_block flex-container">
+                        <label for="prompt_structure">Prompt Structure</label>
+                        <textarea id="prompt_structure" class="text_pole textarea_compact autoSetHeight" placeholder="Place prompt structure here"></textarea>
+                    </div>
+                </div>
+
+                <hr class="sysHR" />
+            </div>
+        </div>
+    </div>
