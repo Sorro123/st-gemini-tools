@@ -9,12 +9,11 @@ const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 const extensionSettings = extension_settings[extensionName];
 
 const TOOLS = {
-    SEARCH: 'search',
     STRUCTURED: 'structured',
 };
 const defaultSettings = {
     geminiToolsEnabled: false,
-    geminiCurrentTool: TOOLS.SEARCH,
+    geminiCurrentTool: TOOLS.STRUCTURED,
     geminiPromptStructure: "",
 };
 
@@ -68,8 +67,7 @@ function enableTools(data)
     const { chatCompletionSettings } = SillyTavern.getContext();
     if(extension_settings[extensionName].geminiToolsEnabled && chatCompletionSettings.chat_completion_source === 'makersuite')
     {
-        if(extension_settings[extensionName].geminiCurrentTool === TOOLS.SEARCH) data.tools = [{google_search: {},}];
-        else if(extension_settings[extensionName].geminiCurrentTool === TOOLS.STRUCTURED)
+ if(extension_settings[extensionName].geminiCurrentTool === TOOLS.STRUCTURED)
         {
             data.responseMimeType = "application/json";
             data.responseSchema = JSON.parse(extension_settings[extensionName].geminiPromptStructure);
